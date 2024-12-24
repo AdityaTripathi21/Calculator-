@@ -1,5 +1,6 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
 }
 
 #container {
@@ -21,23 +22,39 @@ body {
     width: 100%;
     padding: 0;
     border: 0;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    font-size: 6rem;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    text-align: left;
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
 }
 
 
 .button {
     width: 100px;
     height: 100px;
-    border-radius: 5px;
+    border-radius: 50%;
     border: none;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
     background-color: darkgrey;
     margin: auto;
+    color: white;
+    font-weight: 800;
+
+}
+
+button:hover {
+    background-color: rgba(255, 250, 240, 0.473);
+}
+
+button:active {
+    background-color: bisque;
 }
 
 .calc-buttons {
@@ -45,11 +62,21 @@ body {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     gap: 10px;
-    margin: auto;
-
 }
 
 [data-digit="0"] {
+    margin: 0;
+    padding: 0;
     grid-column: span 3;
     width: 100%;
+    border-radius: 15px;
 }
+
+[data-operator] {
+    background-color: orange;
+}
+
+[data-action] {
+    background-color: rgb(74, 74, 72);
+}
+
